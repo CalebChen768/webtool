@@ -36,15 +36,18 @@ const PdfConverter = () => {
 
   return (
     <div className="pdf-converter">
+    <div className="pdf-converter-body">
       <h1 className="title">文件上传与转换</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="subform" onSubmit={handleSubmit}>
         <div className="file-input">
-          <label htmlFor="upload-input">选择文件：</label>
-          <input type="file" id="upload-input" onChange={handleFileChange} accept=".doc, .docx" />
+          <label htmlFor="upload-input">请选择文件</label>
+          <input type="file" id="upload-input" onChange={handleFileChange} accept=".doc, .docx, .ppt, .pptx" />
         </div>
         <button type="submit" className="convert-button">上传并转换为PDF</button>
       </form>
+    </div> 
     </div>
+    
   );
 };
 
