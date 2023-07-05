@@ -1,39 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
 .pdf-converter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    padding: 2rem;
-    background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+form {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  text-align: center;
+  height: auto;
+  width: auto;
+  overflow: auto;
+  animation: scrollEffect 2s ease infinite alternate;
+}
+
+@keyframes scrollEffect {
+  0% {
+      transform: translateX(0);
   }
-  
-  .title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+  100% {
+      transform: translateX(-1px);
   }
-  
-  .file-input {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
+}
+
+.file-input {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 20px;
+}
+
+input[type="file"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+}
+
+.convert-button {
+  padding: 15px 30px;
+  background-color: #2196f3;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.convert-button:hover {
+  background-color: #0d8bff;
+}
+
+@media only screen and (max-width: 768px) {
+  form {
+      width: 70%;
   }
-  
-  .file-input label {
-    margin-right: 1rem;
-    font-size: 1.2rem;
-  }
-  
-  .convert-button {
-    padding: 1rem 2rem;
-    border-radius: 0.25rem;
-    border: none;
-    background-color: #333;
-    color: #fff;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-  
-  .convert-button:hover {
-    background-color: #444;
-  }
-  
+}
