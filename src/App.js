@@ -11,7 +11,7 @@ function App() {
           <Routes>
             <Route exact path="/RandomNumber" element={<RandomNumber />} />
             <Route exact path="PdfConverter" element={<PdfConverter/>} />
-            <Route exact path="/" element={<Pdf />} />
+            <Route exact path="/" element={<PdfConverter />} />
 
           </Routes>
         </div>
